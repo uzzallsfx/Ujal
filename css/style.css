@@ -1,123 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Love Note</title>
-  <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bilbo+Swash+Caps&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap" rel="stylesheet">
-  <style>
-    body {
-      position: relative;
-      font-family: "Archivo", serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      overflow: hidden;
-    }
-    #bgc {
-      width: 100%;
-      height: 100vh;
-      background: url(IMG_20250509_215012_423.jpg) center top no-repeat;
-      background-size: cover;
-      overflow: hidden;
-      position: absolute;
-    }
-    .mb-box {
-      width: 416px;
-      height: auto;
-      padding: 15px;
-      z-index: 2;
-      overflow: hidden;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    .bb {
-      width: 416px;
-      max-height: 609px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 20px #999;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.5); /* semi-transparent dark background */
-      backdrop-filter: blur(6px);
-    }
-    .bb h2 {
-      margin: 15px auto 0px;
-      padding: 20px 0px 10px;
-      width: 280px;
-      font-size: 22px;
-      text-align: center;
-      color: #ffffff;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-    .bb_text {
-      padding: 20px 40px;
-      text-indent: 2em;
-      line-height: 30px;
-      font-size: 18px;
-      color: #ffffff;
-      overflow: auto;
-    }
-    .bb_myname {
-      text-align: right;
-      padding: 0px 40px 20px;
-      line-height: 30px;
-      color: #ffffff;
-    }
-    .love_time {
-      width: 100%;
-      text-align: center;
-      font-size: 16px;
-      color: #ffffff;
-      margin-top: 10px;
-    }
-    .love_time span {
-      color: #ffffff;
-    }
-    .musicbg {
-      margin-left: -120px;
-      opacity: .5;
-      position: fixed;
-      bottom: 60px;
-      left: 50%;
-    }
-    .musicbg:hover {
-      opacity: .9;
-    }
-    .banquan {
-      width: 100%;
-      text-align: center;
-      color: #ccc;
-      position: fixed;
-      bottom: 30px;
-      font-size: 14px;
-    }
-    .banquan a {
-      color: #ccc;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <div id="bgc"></div>
-  <div class="mb-box">
-    <div class="bb">
-      <h2>To My Love</h2>
-      <div class="bb_text">
-        This is a heartfelt message surrounded by beauty and warmth.
-        Your presence makes every day brighter, and every moment sweeter.
-      </div>
-      <div class="bb_myname">— Yours truly</div>
-    </div>
-    <div class="love_time"><span>Since May 10, 2025</span></div>
-  </div>
-  <div class="musicbg">
-    <!-- Optional: Place music or decorative element here -->
-  </div>
-  <div class="banquan">
-    &copy; 2025 <a href="#">YourName</a>. All rights reserved.
-  </div>
-</body>
-</html>
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bilbo+Swash+Caps&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+body {
+    position: relative;
+    font-family: "Archivo", serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow: hidden;
+}
+
+#bgc {
+    width: 100%;
+    height: 100%;
+    background: url(../img/IMG_20250509_215012_423.jpg) center top #f4f4f4;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.mb-box {
+    width: 416px;
+    height: auto;
+    padding: 15px;
+    z-index: 2;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bb {
+    width: 416px;
+    max-height: 609px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #999;
+    overflow: hidden;
+    background: url(../images/alpha-bg.png);
+    backdrop-filter: blur(5px);
+}
+
+.bb h2 {
+    margin: 15px auto 0px;
+    padding: 20px 0px 10px;
+    width: 280px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bb_text {
+    height: 100%;
+    padding: 20px 40px;
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 18px;
+    color: #ffffff;
+    overflow: auto;
+}
+
+.bb_myname {
+    text-align: right;
+    padding: 0px 40px 20px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.mb-x {
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 260px;
+}
+
+.love_time {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.love_time span {
+    color: #ffffff;
+}
+
+.musicbg {
+    margin-left: -120px;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+}
+
+.musicbg:hover {
+    filter: alpha(opacity=90);
+    opacity: .9;
+}
+
+.banquan {
+    width: 100%;
+    text-align: center;
+    color: #cccccc;
+    position: fixed;
+    bottom: 30px;
+    font-size: 14px;
+}
+
+.banquan a {
+    color: #cccccc;
+    text-decoration: none;
+}
