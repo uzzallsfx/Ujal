@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>for pema sharab | coding with uzal</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="language" content="en-US">
-    <meta name="title" content="for pema sharab | coding with uzal">
-    <meta name="github" content="https://github.com/Aoudumber-Bade">
-    <meta name="describe" content="Collecting resources isn't easy; your star is my motivation to keep going, and PRs are also welcome!">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/js.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+  <meta charset="utf-8" />
+  <title>for pema sharab | coding with uzal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 
 <body id="bgc">
-    <div class="mb-box">
-        <div class="bb">
-            <h2>to pema sharab</h2>
-            <div class="bb_text">
-                <div id="code">
+  <div class="mb-box">
+    <div class="bb">
+      <h2>to pema sharab</h2>
+      <div class="bb_text">
+        <div id="code">
 Hey there,  
 I know it might be weird about me popping out of nowhere to tell this thing but Ngoma bay laba chin I am actually attracted to you a lot....  
 Your vibe is different than any other girl I've seen before.... you have a different energy radiating around you like a magnetic force to me that I'm getting attracted to...  
@@ -36,40 +30,46 @@ Nga choe lu face to face lab go di noye but choe gi nga lu dyancha luu ba chin s
 
 And last and final...  
 Nga choe Ngoma ra gaa yaaa cc
-                </div>
-            </div>
-            <p class="bb_myname">- from ujal</p>
         </div>
+      </div>
+      <p class="bb_myname">- from ujal</p>
     </div>
+  </div>
 
-    <!-- Background Music -->
-    <audio id="media" src="Tshagay-Malang-️-bhutanese-coversong-fyp_30.mp3" autoplay loop preload="auto"></audio>
+  <!-- Background Music -->
+  <audio id="media" autoplay loop>
+    <source src="Tshagay-Malang-️-bhutanese-coversong-fyp_30.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-    <!-- Typewriter Script -->
-    <script>
-        Element.prototype.typewriter = function () {
-            var element = this,
-                content = element.innerHTML,
-                index = 0;
-            element.innerHTML = "";
-            var timer = setInterval(function () {
-                var currentChar = content.substr(index, 1);
-                if (currentChar === "<") {
-                    index = content.indexOf(">", index) + 1;
-                } else {
-                    index++;
-                }
-                element.innerHTML = content.substring(0, index) + (index & 1 ? "_" : "");
-                if (index >= content.length) {
-                    clearInterval(timer);
-                }
-            }, 100);
-            return this;
-        };
-        document.getElementById("code").typewriter();
-    </script>
+  <!-- Typewriter Effect -->
+  <script>
+    Element.prototype.typewriter = function () {
+      const element = this;
+      const content = element.innerHTML;
+      let index = 0;
+      element.innerHTML = "";
+      const timer = setInterval(function () {
+        let currentChar = content.substr(index, 1);
+        if (currentChar === "<") {
+          index = content.indexOf(">", index) + 1;
+        } else {
+          index++;
+        }
+        element.innerHTML = content.substring(0, index) + (index & 1 ? "_" : "");
+        if (index >= content.length) clearInterval(timer);
+      }, 100);
+      return this;
+    };
+    window.onload = function () {
+      document.getElementById("code").typewriter();
 
-    <script type="text/javascript" src="js/count.js"></script>
-    <script type="text/javascript" async src="js/su.js"></script>
+      // Try to force audio autoplay on mobile after touch
+      document.body.addEventListener("click", function () {
+        const media = document.getElementById("media");
+        if (media.paused) media.play();
+      });
+    };
+  </script>
 </body>
 </html>
