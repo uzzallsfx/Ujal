@@ -1,48 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Archivo:ital,wght@0,100..900;1,100..900&family=Bilbo+Swash+Caps&family=Inter:opsz,wght@14..32,500&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
 
-body {
-    position: relative;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: "Archivo", serif;
     background-color: #f4f4f4;
-    margin: 0;
     overflow: hidden;
 }
 
 #bgc {
     width: 100%;
     height: 100%;
-    background: url(../img/IMG_20250509_215012_423.jpg) center top #f4f4f4;
-    overflow: hidden;
+    background: url(../img/IMG_20250509_215012_423.jpg) center center no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .mb-box {
-    width: 500px;
-    height: auto;
-    padding: 15px;
+    width: 100%;
+    max-width: 540px;
     z-index: 2;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .bb {
-    width: 500px;
-    max-height: 700px;
+    width: 100%;
+    max-height: 80vh;
     border-radius: 10px;
     box-shadow: 0px 0px 20px #999;
-    overflow: hidden;
-    background: url(../images/alpha-bg.png);
-    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
 }
 
 .bb h2 {
     margin: 15px auto 0px;
     padding: 20px 0px 10px;
-    width: 320px;
-    font-size: 20px;
+    width: 90%;
+    font-size: 22px;
     text-align: center;
     color: #ffffff;
     white-space: nowrap;
@@ -51,64 +50,30 @@ body {
 }
 
 .bb_text {
-    height: 100%;
-    padding: 20px 40px;
+    padding: 20px 30px;
     text-indent: 2em;
-    line-height: 30px;
+    line-height: 32px;
     font-size: 18px;
     color: #ffffff;
     overflow: auto;
+    white-space: pre-wrap;
 }
 
 .bb_myname {
     text-align: right;
-    padding: 0px 40px 20px;
+    padding: 0px 30px 20px;
     line-height: 30px;
     color: #ffffff;
 }
 
-.mb-x {
-    width: 500px;
-    height: auto;
-    overflow: hidden;
-    margin-top: 260px;
-}
+@media screen and (max-width: 600px) {
+    .bb {
+        max-height: 90vh;
+    }
 
-.love_time {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.love_time span {
-    color: #ffffff;
-}
-
-.musicbg {
-    margin-left: -120px;
-    filter: alpha(opacity=50);
-    opacity: .5;
-    position: fixed;
-    bottom: 60px;
-    left: 50%;
-}
-
-.musicbg:hover {
-    filter: alpha(opacity=90);
-    opacity: .9;
-}
-
-.banquan {
-    width: 100%;
-    text-align: center;
-    color: #cccccc;
-    position: fixed;
-    bottom: 30px;
-    font-size: 14px;
-}
-
-.banquan a {
-    color: #cccccc;
-    text-decoration: none;
+    .bb_text {
+        padding: 20px 20px;
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
