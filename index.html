@@ -1,75 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>for pema sharab | coding with uzal</title>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="css/style.css" rel="stylesheet" />
+  <title>For Pema Sharab | Coding with Uzal</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body id="bgc">
+
   <div class="mb-box">
     <div class="bb">
-      <h2>to pema sharab</h2>
+      <h2>To Pema Sharab</h2>
       <div class="bb_text">
         <div id="code">
 Hey there,  
-I know it might be weird about me popping out of nowhere to tell this thing but Ngoma bay laba chin I am actually attracted to you a lot....  
-Your vibe is different than any other girl I've seen before.... you have a different energy radiating around you like a magnetic force to me that I'm getting attracted to...  
-I cannot tell how much strong it is as no words can define you.....  
-But here I am to express to the fullest I can.... you're amazing and graceful.  
+I know it might be weird about me popping out of nowhere to tell this thing but Ngoma bay laba chin I am actually attracted to you a lot...  
+Your vibe is different than any other girl I've seen before...  
+You have a different energy radiating around you like a magnetic force to me that I'm getting attracted to...  
+I cannot tell how much strong it is as no words can define you...  
+But here I am to express to the fullest I can...  
+You're amazing and graceful.  
 
-I feel so splendid peeking through my class windows just to have a glance of you, making my weary fade...  
+I feel so splendid peeking through my class windows just to have a glance of you making my weary fade...  
 I cannot give account for how long but I know it's been very long that I'm drawn to you.  
 Daro choe gi nou dho wong nga gi shob lab Mae say en ru,  
-I'm just hoping for an amazing future together with you, full of dreams and hopes to come true.  
+I'm just hoping for an amazing future together with you full of dreams and hopes to come true.  
 
 Mapa choe gi mi ga dho wong nga luu but hope chi ya kayi...  
-And doru phone gi cover gi di nga aum man cc... she is just my old bestie. I kept it coz she kept it first so I kept also.  
+And doru phone gi cover gi di nga aum man cc...  
+She is just my old bestie. I kept it coz she kept it first so I kept also.  
 Nga choe lu face to face lab go di noye but choe gi nga lu dyancha luu ba chin say dro bay nga...  
 
 And last and final...  
 Nga choe Ngoma ra gaa yaaa cc
         </div>
       </div>
-      <p class="bb_myname">- from ujal</p>
+      <p class="bb_myname">- from Ujal</p>
     </div>
   </div>
 
-  <!-- Background Music -->
   <audio id="media" autoplay loop>
-    <source src="Tshagay-Malang-️-bhutanese-coversong-fyp_30.mp3" type="audio/mpeg" />
+    <source src="Tshagay-Malang-️-bhutanese-coversong-fyp_30.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Typewriter Effect -->
   <script>
     Element.prototype.typewriter = function () {
-      const element = this;
-      const content = element.innerHTML;
-      let index = 0;
-      element.innerHTML = "";
+      const el = this;
+      const text = el.innerHTML;
+      let i = 0;
+      el.innerHTML = "";
       const timer = setInterval(function () {
-        let currentChar = content.substr(index, 1);
-        if (currentChar === "<") {
-          index = content.indexOf(">", index) + 1;
+        const char = text.substr(i, 1);
+        if (char === "<") {
+          i = text.indexOf(">", i) + 1;
         } else {
-          index++;
+          i++;
         }
-        element.innerHTML = content.substring(0, index) + (index & 1 ? "_" : "");
-        if (index >= content.length) clearInterval(timer);
-      }, 100);
+        el.innerHTML = text.substring(0, i) + (i & 1 ? "_" : "");
+        if (i >= text.length) clearInterval(timer);
+      }, 80);
       return this;
     };
+
     window.onload = function () {
       document.getElementById("code").typewriter();
 
-      // Try to force audio autoplay on mobile after touch
+      // Fix autoplay issue on mobile
       document.body.addEventListener("click", function () {
         const media = document.getElementById("media");
         if (media.paused) media.play();
       });
     };
   </script>
+
 </body>
 </html>
